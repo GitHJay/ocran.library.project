@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="bookIDColumn" prefWidth="75.0" text="Book ID" />
+          <TableColumn fx:id="bookTitleColumn" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="bookAuthorColumn" prefWidth="75.0" text="Author" />
+            <TableColumn fx:id="bookPublisherColumn" prefWidth="75.0" text="Publisher" />
+            <TableColumn fx:id="bookAvailabilityColumn" prefWidth="75.0" text="Availability" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                  <MenuItem fx:id="contextEdit" mnemonicParsing="false" onAction="#handleBookEditOperation" text="Edit" />
+                <MenuItem fx:id="contextDelete" mnemonicParsing="false" onAction="#handleBookDeleteOperation" text="Delete" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ocran.MainController">
+   <children>
+      <BorderPane prefHeight="200.0">
+         <left>
+            <VBox fx:id="vboxNav" prefWidth="270.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../drawables/logo.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <JFXButton fx:id="addMemberButton" onAction="#loadAddMember" prefHeight="50.0" prefWidth="292.0" text="Add Member">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../drawables/Add%20User%20Group%20Man%20Man_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="addBookButton" layoutX="10.0" layoutY="260.0" onAction="#loadAddBook" prefHeight="50.0" prefWidth="308.0" text="Add Book">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../drawables/Book_52px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="viewMembersButton" layoutX="10.0" layoutY="310.0" onAction="#loadViewMembers" prefHeight="50.0" prefWidth="296.0" text="View Member">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../drawables/User%20Groups_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="bookShelfButton" layoutX="10.0" layoutY="360.0" onAction="#loadBookShelf" prefHeight="50.0" prefWidth="289.0" text="Book Shelf">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../drawables/Book%20Shelf1_50px.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="50.0" />
+               </padding>
+            </VBox>
+         </left>
+         <center>
+            <JFXTabPane prefHeight="600.0" prefWidth="652.0" BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab text="Issue">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox fx:id="hboxBookInfo" alignment="CENTER" layoutX="30.0" layoutY="30.0" prefHeight="230.0" prefWidth="600.0">
+                                 <children>
+                                    <TextField fx:id="bookIDTextField" onAction="#loadBookInfo" prefHeight="26.0" prefWidth="223.0">
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <VBox alignment="CENTER" prefHeight="156.0" prefWidth="363.0" spacing="5.0">
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <Text fx:id="bookTitleText" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Title" textAlignment="CENTER" wrappingWidth="308.7294921875" />
+                                          <Text fx:id="bookAuthorText" layoutX="10.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" textAlignment="CENTER" wrappingWidth="308.7294921875" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="hboxMemberInfo" alignment="CENTER" layoutX="30.0" layoutY="280.0" prefHeight="230.0" prefWidth="600.0">
+                                 <children>
+                                    <TextField fx:id="memberIDTextField" onAction="#loadMemberInfo" prefHeight="26.0" prefWidth="223.0">
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <VBox alignment="CENTER" prefHeight="156.0" prefWidth="363.0" spacing="5.0">
+                                       <children>
+                                          <Text fx:id="memberNameText" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Name" textAlignment="CENTER" wrappingWidth="308.7294921875" />
+                                          <Text fx:id="memberPhoneNumberText" layoutX="10.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact" textAlignment="CENTER" wrappingWidth="308.7294921875" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutY="540.0" prefHeight="50.0" prefWidth="660.0">
+                                 <children>
+                                    <JFXButton fx:id="issueButton" onAction="#loadIssueOperation" prefHeight="50.0" prefWidth="104.0" text="Issue" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Renewal / Submission">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="686.0">
+                           <children>
+                              <BorderPane layoutX="230.0" layoutY="209.0" prefHeight="618.0" prefWidth="660.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <top>
+                                    <JFXTextField fx:id="bookID" alignment="CENTER" labelFloat="true" onAction="#loadBookDetails" prefWidth="622.0" promptText="Search by BOOK ID" BorderPane.alignment="CENTER">
+                                       <BorderPane.margin>
+                                          <Insets left="10.0" right="10.0" top="20.0" />
+                                       </BorderPane.margin>
+                                    </JFXTextField>
+                                 </top>
+                                 <center>
+                                    <ListView fx:id="issueDetailsList" prefHeight="200.0" prefWidth="200.0">
+                                       <padding>
+                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                       </padding>
+                                       <BorderPane.margin>
+                                          <Insets top="5.0" />
+                                       </BorderPane.margin>
+                                    </ListView>
+                                 </center>
+                                 <bottom>
+                                    <HBox alignment="CENTER" prefHeight="70.0" prefWidth="660.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <JFXButton fx:id="renewButton" onAction="#loadRenewOperation" prefHeight="50.0" prefWidth="104.0" text="Renew" />
+                                          <JFXButton fx:id="submitButton" onAction="#loadSubmissionOperation" prefHeight="50.0" prefWidth="104.0" text="Submit" />
+                                       </children>
+                                    </HBox>
+                                 </bottom>
+                              </BorderPane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </center>
+         <right>
+            <VBox fx:id="vboxUser" alignment="TOP_CENTER" prefWidth="270.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="userImageView" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../drawables/selena_gomez_1.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="userLbl" contentDisplay="BOTTOM" text="User name">
+                     <graphic>
+                        <Separator prefWidth="200.0" />
+                     </graphic>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Label" />
+                  <Pane prefHeight="336.0" prefWidth="250.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutY="282.0" prefHeight="50.0" prefWidth="252.0">
+                           <children>
+                              <JFXButton fx:id="editButton" prefHeight="50.0" prefWidth="50.0">
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../drawables/icons8-pencil-filled-50.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="settingsButton" layoutX="149.0" layoutY="10.0" onAction="#loadSettings" prefHeight="50.0" prefWidth="50.0">
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../drawables/Settings_50px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="signoutButton" layoutX="180.0" layoutY="10.0" onAction="#signOut" prefHeight="50.0" prefWidth="50.0">
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../drawables/icons8-sign-out-filled-50.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <Separator layoutY="274.0" prefHeight="0.0" prefWidth="250.0" />
+                     </children>
+                  </Pane>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="50.0" />
+               </padding>
+            </VBox>
+         </right>
+         <top>
+            <JFXToolbar fx:id="toolbar" prefHeight="50.0" BorderPane.alignment="CENTER">
+               <right>
+                  <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="372.0" BorderPane.alignment="CENTER" />
+               </right>
+               <left>
+                  <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="202.0" BorderPane.alignment="CENTER" />
+               </left>
+            </JFXToolbar>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>

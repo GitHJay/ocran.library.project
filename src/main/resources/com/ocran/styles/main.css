@@ -1,0 +1,65 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#toolbar {
+	-fx-background-color: #000000;
+}
+
+#vboxNav {
+	-fx-background-color: #ffffff;
+}
+
+#vboxUser {
+	-fx-background-color: #ffffff;
+}
+
+#hboxBookInfo {
+	-fx-background-color: #eeeeee;
+}
+
+#hboxMemberInfo {
+	-fx-background-color: #eeeeee;
+}
+
+#issueButton {
+	-fx-background-color: #000000;
+	-fx-text-fill: #ffffff;
+}
+
+#issueButton:hover{
+	-fx-background-color: #212121;
+}
+
+#renewButton {
+	-fx-background-color: #000000;
+	-fx-text-fill: #ffffff;
+}
+
+#submitButton {
+	-fx-background-color: #000000;
+	-fx-text-fill: #ffffff;
+}
+
+.label {
+	-fx-border-bottom-color: #000000;
+}
+
+.tab-label{
+	-fx-pref-height: 50px;
+	-fx-text-fill: #000000;
+}
+
+.tab-header-background {
+    -fx-background-color: #ffffff;
+}
+
+.jfx-tab-pane .tab-header-area .jfx-rippler {
+  -jfx-rippler-fill: #000000;
+}
+
+.jfx-tab-pane .tab-selected-line { 
+	-fx-background-color: #000000; 
+	-fx-pref-height: 4px;
+}
+
+.jfx-button:hover {
+	-fx-background-color: #e0e0e0;
+}
